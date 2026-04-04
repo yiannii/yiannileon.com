@@ -1,0 +1,25 @@
+:root {
+font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    --color1:#E4F1F6;
+    --color2:#67AFCB;
+    --color3:#347B98;
+    --color4:#1A3E4C;
+    --color5:#092834;}
+.element {
+font-family: var(--system-ui);
+}
+
+.textBody{
+    display: flex;
+    align-items: space-around;
+    margin: 0 auto;
+    padding: 0 16px;
+    gap: 20px;
+}
+
+.textBody img{
+    max-width: 250px;
+    height: fit-content;
+    border-radius: 8px;
+    justify-content: center;
+}
