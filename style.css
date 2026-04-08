@@ -1,38 +1,95 @@
 :root {
-font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    --color1:#3f3f37;
-    --color2:#d6d6b1;
-    --color3:#494331;
-    --color4:#878472;
-    --color5:#d16014;
+    font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
-    color-scheme: dark light;
-    /* background-color: #433e3f; */
+    /* --background:#3f3f37;
+    --text:#ebebda;
+    --accent1:#494331;
+    --accent2:#878472;
+    --pop:#d16014; */
 }
 
-.element {
-font-family: var(--system-ui);
+/* header{
+    border-bottom: 2px solid;
+    border-radius: 2px;
+    background-color: black;
+   /* color: var(--text);
+    position: sticky;
+    top: 0;
+} */
+body{
+    background-color: #f4f4f4;
+    /* color: #555; */
+    font-size: 16px;
+    line-height: 1.6em;
+    margin: 0;
 }
 
-header{
-    padding-left: 128px;
-    /* color: #c0b7b1; */
-}
-
-.textBody{
-    /* display: flex; */
-    align-items:center;
-    margin: 0 auto;
-    padding: 0 16px;
+.container{
     width: 80%;
-    gap: 20px;
+    margin: auto;
+    display: flow-root;
+    padding: 0 16px; /*mobile spacing*/
 }
 
-.textBody img{
+@media (min-width: 768px) {
+    .container{
+        padding: 0 32px; /*tablet spacing*/
+    }
+}
+
+@media (min-width: 1024px) {
+    .container{
+        padding: 0 48px; /*desktop spacing*/
+    }
+}
+
+#main-header {
+    padding: 0 32px;
+    background-color: #f4f4f4;
+    margin-bottom: 0;
+}
+
+#main-header h1 {
+    margin: 0;
+    padding: 8px 0;
+}
+
+#navbar{
+    position: sticky;
+    top: 0;
+    border-bottom: 2px solid black;
+    margin-bottom: 16px;
+    padding: 5px 32px 5px;
+    background-color: #f4f4f4;
+    z-index: 100;
+}
+
+#navbar ul{
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 8px 32px;
+    color: black;
+    margin: 0;
+}
+
+#navbar a{
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    transition: letter-spacing 0.3s;
+}
+
+#navbar a:hover{
+    color: #555;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+#about-me img{
     max-width: 250px;
     height: fit-content;
     border-radius: 8px;
-    justify-content: center;
     float: left ;
-    margin-right: 1.5rem;
+    margin-right: 16px;
 }
