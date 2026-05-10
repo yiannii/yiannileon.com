@@ -1,72 +1,97 @@
-# Personal Blog & Homelab Website
+# yiannileon.com — Self-Hosted Personal Website
 
-A simple self-hosted blog-style website built to practice web hosting, Linux server administration, networking, and web development fundamentals.
+A personal blog and portfolio website built and hosted from scratch as a hands-on exercise in web development, Linux server administration, and network configuration.
+
+The site is live at [yiannileon.com](https://yiannileon.com)
 
 ---
 
 ## Purpose
 
-This project was created as a hands-on learning environment for web hosting and systems administration. Rather than using managed hosting platforms, the goal was to build and maintain a website from the ground up while learning how modern web infrastructure works.
+This project exists to develop and demonstrate practical skills in web hosting and systems administration. Everything from the HTML and CSS to the server configuration and DNS setup was done manually and independently, without the use of site builders, managed hosting platforms, or AI-generated code.
 
-Areas of focus include:
-
-* Linux server administration
-* Web server configuration
-* Domain and DNS management
-* HTTPS and SSL certificates
-* Secure remote server access
-* Deployment workflows with Git
-* Basic front-end web development
+A secondary goal is to use the site as a personal blog to document ongoing projects and learning.
 
 ---
 
-## Technologies Used
+## Built With
 
-* HTML5
-* CSS3
-* Git
-* Debian Linux
-* Nginx
-* Certbot / Let's Encrypt
-* Porkbun DNS
-* Vultr VPS Hosting
-* OpenSSH
+**Front-end**
+- HTML5
+- CSS3
 
----
+**Server**
+- Debian 12 (Bookworm)
+- Nginx
+- Let's Encrypt SSL via Certbot
 
-## What This Project Includes
+**Infrastructure**
+- Vultr VPS (Shared CPU, New York region)
+- Porkbun domain registrar
+- Custom DNS configuration (A and AAAA records)
+- SSH key authentication
 
-* A simple static blog-style website
-* Self-hosting on a cloud VPS
-* Nginx web server configuration
-* Domain name and DNS setup through Porkbun
-* HTTPS configuration using Let's Encrypt and Certbot
-* SSH configuration and basic server hardening
-* File transfers and deployment using Git and SSH
-* Linux command line administration and troubleshooting
+**Workflow**
+- Git for version control and deployment
 
 ---
 
-## What I’m Learning
+## Features
 
-Through this project, I am gaining practical experience with:
-
-* Hosting and maintaining a live website
-* Linux systems administration
-* Networking and DNS fundamentals
-* Web server configuration
-* Security best practices for public-facing servers
-* Version control and deployment workflows
-* Debugging real-world server and configuration issues
+- Fully self-hosted on a Linux VPS
+- Served over HTTPS with a valid SSL certificate
+- Responsive layout supporting desktop and mobile
+- Deployed via Git — updates pushed to GitHub are pulled directly onto the server
+- Custom domain with IPv4 and IPv6 support
 
 ---
 
-## Future Goals
+## What I Did
 
-Planned additions and improvements include:
+- Provisioned and configured a Debian 12 VPS on Vultr
+- Registered a custom domain and configured DNS records on Porkbun
+- Hardened SSH access using key-based authentication
+- Installed and configured Nginx to serve static files via a custom server block
+- Obtained and configured an SSL/TLS certificate using Certbot and Let's Encrypt
+- Configured UFW firewall rules to allow web and SSH traffic
+- Set up a Git-based deployment workflow for updating the live site
+- Built the front-end from scratch using HTML and CSS, applying responsive design principles and semantic markup
 
-* Building and maintaining a functioning self-hosted email server
-* Learning email-related DNS records such as MX, SPF, DKIM, and DMARC
-* Improving server security and spam prevention
-* Expanding knowledge of Linux networking and mail server administration
-* Continuing to refine the website and hosting environment
+---
+
+## Deployment
+
+The site is deployed by cloning this repository directly onto the server:
+
+```
+git clone https://github.com/yiannii/yianniblog.git /var/www/yiannileon.com
+```
+
+To update the live site after pushing changes to GitHub:
+
+```
+cd /var/www/yiannileon.com
+git pull
+```
+
+---
+
+## Lessons Learned
+
+- How DNS resolution works and how to configure A and AAAA records
+- How Nginx server blocks work and how to configure one from scratch
+- How SSL/TLS certificates work and how Certbot automates their issuance and renewal
+- How UFW manages firewall rules on Linux
+- How SSH key authentication works and why it is preferable to password login
+- Semantic HTML structure and CSS layout fundamentals including flexbox, responsive design with media queries, and the cascade
+- The importance of separating concerns — structure in HTML, presentation in CSS
+- How to read and interpret server logs and error messages to diagnose issues
+
+---
+
+## Author
+
+Yianni Leontakianakos
+[yiannileon.com](https://yiannileon.com) · [LinkedIn](https://www.linkedin.com/in/yiannisl/) · [GitHub](https://github.com/yiannii)
+
+---
