@@ -8,7 +8,7 @@ The site is live at [yiannileon.com](https://yiannileon.com)
 
 ## Purpose
 
-This project exists to develop and demonstrate practical skills in web hosting and systems administration..
+This project exists to develop and demonstrate practical skills in web hosting and systems administration.
 
 A secondary goal is to use the site as a personal blog to document ongoing projects and learning.
 
