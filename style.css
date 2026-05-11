@@ -1,11 +1,33 @@
 :root {
     font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
-    /* --background:#3f3f37;
-    --text:#ebebda;
-    --accent1:#494331;
-    --accent2:#878472;
-    --pop:#d16014; */
+    --background:#f4f4f4;
+    --text:#000;
+    --hover:#383838;
+    --footerborder:#ccc;
+    --footertext:#888;
+    --button: #303030;
+}
+
+.darkmode {
+    --background: #1a1a1a;
+    --text: #e8e8e8;
+    --hover: #aaaaaa;
+    --footerborder: #333;
+    --footertext: #666;
+}
+
+#theme-switch {
+    margin-left: auto;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+#theme-icon {
+    width: 24px;
+    height: 24px;
 }
 
 /* header{
@@ -17,7 +39,7 @@
     top: 0;
 } */
 body {
-    background-color: #f4f4f4;
+    background-color: var(--background);
     /* color: #555; */
     font-size: 16px;
     line-height: 1.6em;
@@ -25,6 +47,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    color: var(--text);
 }
 
 main {
@@ -36,6 +59,7 @@ main {
     margin: auto;
     display: flow-root;
     padding: 0 16px; /*mobile spacing*/
+    max-width: 900px;
 }
 
 #about-me img {
@@ -44,6 +68,11 @@ main {
     border-radius: 8px;
     display: block;
     margin: 0 auto 16px auto;
+}
+
+#clock {
+    margin-left: auto;
+    display: none;
 }
 
 @media (min-width: 768px) {
@@ -56,6 +85,9 @@ main {
         margin-right: 16px;
         margin-bottom: 8px;
     }
+    #clock {
+        display: inline;
+    }
 }
 
 @media (min-width: 1024px) {
@@ -66,12 +98,12 @@ main {
 
 #main-header {
     padding: 0 32px;
-    background-color: #f4f4f4;
+    background-color: var(--background);
     margin-bottom: 0;
     position: sticky;
     top: 0;
     z-index: 100;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid var(--text);
     margin-bottom: 16px;
 }
 
@@ -86,15 +118,10 @@ main {
     /* border-bottom: 2px solid black; */
     /* margin-bottom: 16px; */
     padding: 5px 5px 5px;
-    background-color: #f4f4f4;
+    background-color: var(--background);
     /* z-index: 100; */
     display: flex;
     align-items: center;
-}
-
-#clock {
-    font-style: italic;
-    margin-left: auto;
 }
 
 #navbar ul {
@@ -102,30 +129,30 @@ main {
     list-style: none;
     display: flex;
     gap: 8px 32px;
-    color: black;
+    color: var(--text);
     margin: 0;
 }
 
 #navbar a {
-    color: black;
+    color: var(--text);
     text-decoration: none;
     font-size: 18px;
     transition: all 0.4s;
 }
 
 #navbar a:hover {
-    color: #383838;
+    color: var(--hover);
     font-weight: bold;
     letter-spacing: 1px;
 }
 
 
 #main-footer {
-    border-top: 1px solid #ccc;
+    border-top: 1px solid var(--footerborder);
     padding: 16px 0;
     text-align: center;
     font-size: 0.875rem;
-    color: #888;
+    color: var(--footertext);
     margin-top: 32px;
     line-height: 1.2;
 }
