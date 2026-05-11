@@ -54,9 +54,7 @@ If you want to replicate this setup, you’ll need:
 
 Clone the repository onto the server (one-time setup):
 
-    git clone https://github.com/yiannii/yianniblog.git /var/www/yiannileon.com
-
-> **Note:** The repository is named `yianniblog` but is cloned into `/var/www/yiannileon.com` to match the domain name. This is intentional and does not affect functionality.
+    git clone https://github.com/yiannii/yiannileon.com.git /var/www/yiannileon.com
 
 To update the live site after pushing changes from your local machine:
 
