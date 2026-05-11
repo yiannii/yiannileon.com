@@ -1,97 +1,82 @@
-# yiannileon.com — Self-Hosted Personal Website
+# Personal Blog & Portfolio — Self-Hosted on a Linux VPS
 
-A personal blog and portfolio website built and hosted from scratch as a hands-on exercise in web development, Linux server administration, and network configuration.
+A self-hosted blog and portfolio website built from scratch as a hands-on exercise in web development, Linux server administration, and network configuration.
 
-The site is live at [yiannileon.com](https://yiannileon.com)
-
----
-
-## Purpose
-
-This project exists to develop and demonstrate practical skills in web hosting and systems administration.
-
-A secondary goal is to use the site as a personal blog to document ongoing projects and learning.
+**Live at:** [https://yiannileon.com](https://yiannileon.com)
 
 ---
 
 ## Built With
 
-**Front-end**
-- HTML5
-- CSS3
+**Front-end**  
+- HTML5, CSS3 (responsive, mobile-first, semantic markup)
 
-**Server**
-- Debian 12 (Bookworm)
-- Nginx
-- Let's Encrypt SSL via Certbot
+**Server**  
+- Debian 12 (Bookworm)  
+- Nginx  
+- Certbot / Let's Encrypt
 
-**Infrastructure**
-- Vultr VPS (Shared CPU, New York region)
-- Porkbun domain registrar
-- Custom DNS configuration (A and AAAA records)
-- SSH key authentication
+**Infrastructure**  
+- Vultr VPS  
+- Porkbun (domain registrar)  
+- OpenSSH, UFW
 
-**Workflow**
-- Git for version control and deployment
+**Workflow**  
+- Git
 
 ---
 
-## Features
+## Prerequisites
 
-- Fully self-hosted on a Linux VPS
-- Served over HTTPS with a valid SSL certificate
-- Responsive layout supporting desktop and mobile
-- Deployed via Git — updates pushed to GitHub are pulled directly onto the server
-- Custom domain with IPv4 and IPv6 support
+If you want to replicate this setup, you’ll need:
 
----
-
-## What I Did
-
-- Provisioned and configured a Debian 12 VPS on Vultr
-- Registered a custom domain and configured DNS records on Porkbun
-- Hardened SSH access using key-based authentication
-- Installed and configured Nginx to serve static files via a custom server block
-- Obtained and configured an SSL/TLS certificate using Certbot and Let's Encrypt
-- Configured UFW firewall rules to allow web and SSH traffic
-- Set up a Git-based deployment workflow for updating the live site
-- Built the front-end from scratch using HTML and CSS, applying responsive design principles and semantic markup
+- A Linux VPS (Linode, DigitalOcean, Vultr, etc.)
+- A registered domain with DNS management access (Porkbun, Namecheap, etc.)
+- Local machine with Git and an SSH client
+- Basic familiarity with the command line
 
 ---
 
-## Deployment
+## What I Did (Key Tasks)
 
-The site is deployed by cloning this repository directly onto the server:
-
-```
-git clone https://github.com/yiannii/yianniblog.git /var/www/yiannileon.com
-```
-
-To update the live site after pushing changes to GitHub:
-
-```
-cd /var/www/yiannileon.com
-git pull
-```
+- Provisioned and configured a Debian 12 VPS on Vultr  
+- Registered a custom domain and configured A and AAAA DNS records (IPv4 + IPv6)  
+- Hardened SSH access using key-based authentication  
+- Installed and configured Nginx with a custom server block  
+- Obtained an SSL/TLS certificate using Certbot and Let's Encrypt  
+- Configured UFW firewall rules (allow SSH, HTTP, HTTPS only)  
+- Set up a Git-based deployment workflow  
+- Built the front-end with responsive design and semantic HTML/CSS  
 
 ---
 
-## Lessons Learned
+## Deployment (How to Update the Live Site)
 
-- How DNS resolution works and how to configure A and AAAA records
-- How Nginx server blocks work and how to configure one from scratch
-- How SSL/TLS certificates work and how Certbot automates their issuance and renewal
-- How UFW manages firewall rules on Linux
-- How SSH key authentication works and why it is preferable to password login
-- Semantic HTML structure and CSS layout fundamentals including flexbox, responsive design with media queries, and the cascade
-- The importance of separating concerns — structure in HTML, presentation in CSS
-- How to read and interpret server logs and error messages to diagnose issues
+Clone the repository onto the server (one-time setup):
+
+    git clone https://github.com/yiannii/yianniblog.git /var/www/yiannileon.com
+
+> **Note:** The repository is named `yianniblog` but is cloned into `/var/www/yiannileon.com` to match the domain name. This is intentional and does not affect functionality.
+
+To update the live site after pushing changes from your local machine:
+
+    cd /var/www/yiannileon.com
+    git pull
+
+For a full step‑by‑step guide (initial Nginx config, Certbot, firewall, etc.), see the detailed tutorial on my blog *(link to be added)*.
+
+---
+
+## Future Goals
+
+- Build and maintain a self‑hosted email server
+- Configure MX, SPF, DKIM, and DMARC records
+- Expand server hardening and security practices
+- Document the full project as a tutorial on the site
 
 ---
 
 ## Author
 
-Yianni Leontakianakos
-[yiannileon.com](https://yiannileon.com) · [LinkedIn](https://www.linkedin.com/in/yiannisl/) · [GitHub](https://github.com/yiannii)
-
----
+Yianni Leontakianakos  
+[Live site](https://yiannileon.com) | [LinkedIn](https://linkedin.com/in/yiannisl) | [GitHub](https://github.com/yiannii)
